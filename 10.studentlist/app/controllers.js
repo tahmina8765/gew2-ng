@@ -1,0 +1,51 @@
+(function () {
+    var app = angular.module('StudentApp');
+    function StudentsController($scope, $log) {
+        $scope.students = [
+            {
+                'name': 'Raj Kapur Saha'
+                ,'email': 'kapur.raj@genweb2.com'
+                ,'phone': '8801717094921'
+            }
+            ,{
+                'name': 'Ahad Ahmed'
+                ,'email': 'ahmed.ahad@genweb2.com'
+                ,'phone': '8801710451477'
+            }
+            ,{
+                'name': 'Mohammad Golam Rabbi'
+                ,'email': 'rabbi.golam@genweb2.com'
+                ,'phone': '8801719359331'
+            }
+            ,{
+                'name': 'Dola Chakraborty'
+                ,'email': 'chakraborty.dola@genweb2.com'
+                ,'phone': '8801823258558'
+            }
+            ,{
+                'name': 'Mahmudul Hassan'
+                ,'email': 'hassan.mahmudul@genweb2.com'
+                ,'phone': '8801675729214'
+            }
+            ,{
+                'name': 'Invalid Student'
+                ,'email': ''
+                ,'phone': ''
+            }
+            
+        ];
+        
+        $scope.numLimit = 50;        
+        $scope.displayEmail = function(student){
+            if(student.email != '' && student.email.length > 0){
+                alert(student.email);
+            }else{
+                $log.warn('Email is not available')
+            }
+            
+        };
+    }
+    ;
+    app.controller("StudentsController", StudentsController);
+    StudentsController.$inject = ["$scope", "$log"];
+})();

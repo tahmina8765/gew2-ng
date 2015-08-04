@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+    <head>
+        <title>05. Scope</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>        
+        <div ng-controller="ParentController">
+            Parent : <input type="text" ng-model="name"> {{ name }}
+            <div ng-controller="ChildControllerA">
+                A <input type="text" ng-model="name"> {{ name }}
+            </div>        
+            <div ng-controller="ChildControllerB">
+                B <input type="text" ng-model="name"> {{ name }}
+            </div>
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+</html>

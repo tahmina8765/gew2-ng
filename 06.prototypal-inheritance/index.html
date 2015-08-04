@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+    <head>        
+        <meta charset="UTF-8">
+        <title ng-bind="title"></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body> 
+        {{ name }}
+        <div ng-controller="AuthorController">
+            Host for this week: <span>{{name}}</span>
+            <div ng-controller="BookController">
+                This week's topic: {{name}}
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+        <script src="app/app.js"></script>
+        <script src="app/controllers.js"></script>
+    </body>
+</html>
