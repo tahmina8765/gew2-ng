@@ -5,11 +5,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body ng-controller="StudentController">        
-        <h1>AngularJs: Modularization by layer</h1>
-        <p>Student name is <strong>{{ studentName }}</strong></p>        
+    <body>        
+        <div ng-controller="StudentsController">
+            <ul>
+                <li ng-repeat="student in students">{{ student }}</li>
+            </ul>            
+        </div>
     </body>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
     <script src="app.js"></script>
-    <script src="controllers.js"></script>
 </html>
