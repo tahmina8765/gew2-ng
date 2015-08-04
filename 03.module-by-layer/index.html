@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="MainApp">
+    <head>
+        <title>03. Modularization by layer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>        
+        <div ng-controller="StudentsController">
+            <ul>
+                <li ng-repeat="student in students">{{ student }}</li>
+            </ul>            
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="app.js"></script>
+</html>
