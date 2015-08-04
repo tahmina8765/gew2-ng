@@ -29,12 +29,28 @@
         </nav>
         <div class="container">
             <div class="row" ng-controller="StudentsController">
-                <div class="col-md-12">
-                    <h2>Student List</h2>
+                <div class="col-md-6">
+                    <h2>New Student</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" ng-model="newStudent.name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="newStudent.email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="newStudent.phone">
+                        </div>                       
+                        <button type="submit" class="btn btn-default" ng-click="saveStudent(newStudent)">Submit</button>
+                    </form>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-6">
+                    <h2>Student List</h2>
                     <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="student in students | orderBy: '-name' | limitTo:numLimit"><a href="#" ng-click="displayEmail(student)">{{ student.name | uppercase}}</a> [{{ student.phone}}]</li>                    
+                        <li class="list-group-item" ng-click="" ng-repeat="student in students| orderBy: '-name' | limitTo:numLimit"><a href="#" ng-click="displayEmail(student)">{{ student.name | uppercase}}</a> [<i>{{ student.phone}}</i>]</li>                    
                     </ul>
                 </div>
             </div>
