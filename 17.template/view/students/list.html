@@ -1,0 +1,18 @@
+<div ng-controller="ListController">
+    
+    
+    <div class="col-md-12">  
+        <h2>
+        <a class="btn btn-primary pull-right" href="#/students/new">Add New Student</a>
+        Student List</h2>
+        <ul class="list-group">
+            <li class="list-group-item" ng-click="" ng-repeat="student in students track by $index| orderBy: '-name' | limitTo:numLimit">
+                <i class="glyphicon glyphicon-remove" ng-click="deleteStudent(student, $index)"></i>
+                <a href='#/students/edit/{{$index}}'><i class="glyphicon glyphicon-pencil"></i></a>
+                <a href="#" ng-click="displayEmail(student)">{{ student.name | uppercase}}</a> 
+                [<i>{{ student.phone}}</i>]
+
+            </li>                    
+        </ul>
+    </div>
+</div>
