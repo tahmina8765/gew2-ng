@@ -46,7 +46,7 @@
             }
         ];
 
-        $scope.numLimit = 50;
+        
         $scope.displayEmailCount = 0;
 
         $scope.displayEmail = function (student) {

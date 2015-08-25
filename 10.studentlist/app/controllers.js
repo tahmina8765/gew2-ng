@@ -1,4 +1,6 @@
 (function () {
+    
+    // 2
     var app = angular.module('StudentApp');
     function StudentsController($scope, $log) {
         $scope.newStudent = {
@@ -51,16 +53,43 @@
 
         };
         $scope.saveStudent = function (student) {
-            console.log(student);
+            
             $scope.students.push(student);
-//            $scope.newStudent = {
-//                'name': ''
-//                , 'email': ''
-//                , 'phone': ''
-//            };
+            clearForm();
+            
+            console.log($scope.students);
         };
+        $scope.loadStudent = function (student) {
+            
+            $scope.newStudent = student;
+            
+        };
+        
+        var clearForm  = function(){
+                        $scope.newStudent = {
+                'name': ''
+                , 'email': ''
+                , 'phone': ''
+            };
+        }
     }
     ;
     app.controller("StudentsController", StudentsController);
     StudentsController.$inject = ["$scope", "$log"];
+    
+    
+    
+    // 3
+    app.controller('StudentsController', function($scope, $log){
+        
+    });
+    
+    // 1
+    app.controller('StudentsController', ['$scope', '$log', function(a, b){
+        
+    }]);
+
+
+    
+    
 })();

@@ -1,14 +1,11 @@
 (function () {
     var app = angular.module('StudentApp');
 
-    app.controller("NewStudentController", ["$scope", "$log", "$location", "$routeParams", "studentService", function NewStudentController($scope, $log, $location, $routeParams, studentService) {
-            var index = ($routeParams.index) | false;
-           
-            $log.maintext = "New Student";
-            $log.info($log);
-            
+    app.controller("NewStudentController", ["$scope", "$log", "$location", "$stateParams", "studentService", function NewStudentController($scope, $log, $location, $stateParams, studentService) {
+            var index = ($stateParams.index);
+            $scope.title = "New Student";
+                        
             $scope.students = studentService.students;
-            
             $scope.saveStudent = function (student) {
 
                 var result = studentService.saveStudent(student, index);
@@ -16,9 +13,10 @@
                     $location.path("/students");
                 } else {
                     alert('Invalid Form');
-                }
-            };
-            if (index || (index == 0)) {
+                };
+            };            
+            if (('undefined' != index) && index > -1) {
+                $scope.title = "Edit Student";
                 var student = $scope.students[index];
                 $scope.newStudent = student;
             }
@@ -29,7 +27,6 @@
                 }
                 clearForm();
             };
-
 
         }]);
 

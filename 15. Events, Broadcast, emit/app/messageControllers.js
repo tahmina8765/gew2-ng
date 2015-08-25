@@ -1,6 +1,6 @@
 (function () {
     var app = angular.module('SchoolApp');
-    function MessageController($scope, $log, $timeout) {
+    function MessageController($scope, $timeout) {
         var advertisements = [
             'Advertisement of Google'
             , 'Advertisement of Prothom Alo'
@@ -40,7 +40,7 @@
     ;
 
     app.controller("MessageController", MessageController);
-    MessageController.$inject = ["$scope", "$log", "$timeout"];
+    MessageController.$inject = ["$scope", "$timeout"];
 
 
 })();

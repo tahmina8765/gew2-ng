@@ -1,0 +1,20 @@
+<div class="col-md-12">
+    <h2>
+        <a class="btn btn-primary pull-right" href="#/students">List Students</a>
+        {{ title }}</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Name" ng-model="newStudent.name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" ng-model="newStudent.email">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone" ng-model="newStudent.phone">
+        </div>                       
+        <button type="submit" class="btn btn-default" ng-click="saveStudent(newStudent)">Save</button>                        
+    </form>
+</div>

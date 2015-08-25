@@ -40,7 +40,6 @@
 
         ];
 
-        $scope.numLimit = 50;
         $scope.displayEmailCount = 0;
 
         $scope.displayEmail = function (student) {
@@ -55,8 +54,7 @@
         $scope.$watch('displayEmailCount', function (newValue, oldValue) {
             console.log('called ' + newValue + ' times');
             if (newValue == 2) {
-                alert('You have viewed two emails');
-                
+                alert('You have viewed two emails');                
             }
         });
 

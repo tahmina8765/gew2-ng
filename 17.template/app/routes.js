@@ -7,6 +7,7 @@
                     })
                     .when('/students', {
                         templateUrl: 'view/students/list.html',
+                        controller: 'ListController'
                     })
                     .when('/students/new', {
                         templateUrl: 'view/students/form.html',
