@@ -1,0 +1,14 @@
+<!--{{ title }}
+{{ data }}-->
+<div class="panel-heading">{{data.name}}</div>
+<div class="panel-body">                    
+    <img ng-if="data.photo" src="{{ data.photo}}" class="pull-left" width="100" height="100" style="margin-right: 20px">
+    <img ng-if="!data.photo" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" class="pull-left" width="100"  height="100" style="margin-right: 20px">                                        
+    <p>{{data.email}}</p>
+    <p>{{data.phone}}</p>
+    <p>
+        <a class="btn btn-sm btn-primary" ui-sref="EditStudents({id: data.id})"><i class="fa fa-pencil-square-o"></i> Edit</a>
+        <a class="btn btn-sm btn-default" ui-sref="ViewStudents({id: data.id})"><i class="fa fa-folder-open-o"></i> View</a>
+        <a class="btn btn-sm btn-default" ng-click="deleteStudents({id: data.id})"><i class="fa fa-trash-o"></i> Delete</a>
+    </p>
+</div>
