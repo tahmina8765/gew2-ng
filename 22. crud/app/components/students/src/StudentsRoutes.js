@@ -4,7 +4,11 @@
     app.config(function ($stateProvider, $httpProvider) {
         $stateProvider.state('Students', {
             url: '/students',
-            templateUrl: 'components/students/views/index.html',
+            templateUrl: 'components/students/views/index-list.html',
+            controller: 'StudentsListController'
+        }).state('KanbanStudents', {
+            url: '/students/kanban',
+            templateUrl: 'components/students/views/index-kanban.html',
             controller: 'StudentsListController'
         }).state('ViewStudents', {
             url: '/students/view/:id',
