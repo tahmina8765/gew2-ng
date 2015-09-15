@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="Author" content="Tahmina Khatoon">
+        <meta name="robots" content="all">
+        <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+        <title>AnguarJs App</title>
+        <base href="/">
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+    </head>
+    <body>
+        <!--<div ng-include="'components/partials/nav.html'"></div>-->   
+    <top-menu></top-menu>    
+    <div ui-view ></div>    
+
+    <!-- Bootstrap core JavaScript ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="/assets/lib/jquery/dist/jquery.min.js"></script>-->    
+    <script type="text/javascript" src="/assets/js/util.js"></script>    
+
+    <script type="text/javascript" src="/assets/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/assets/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/assets/lib/angular-resource/angular-resource.js"></script>
+
+    <script type="text/javascript" src="/components/app.js"></script>
+    <script type="text/javascript" src="/components/app.controller.js"></script>
+    <script type="text/javascript" src="/components/app.directive.js"></script>
+
+    <script type="text/javascript" src="/components/students/src/StudentsControllers.js"></script>
+    <script type="text/javascript" src="/components/students/src/StudentsServices.js"></script>
+    <script type="text/javascript" src="/components/students/src/StudentsFactory.js"></script>
+    <script type="text/javascript" src="/components/students/src/StudentsRoutes.js"></script>
+</body>
+</html>

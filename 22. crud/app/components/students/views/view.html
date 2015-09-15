@@ -1,0 +1,28 @@
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="pull-right">
+                <a class="btn btn-sm btn-primary" ui-sref="EditStudents({id: obj.id})">Edit</a>
+            </div>
+            <h1>Details for {{obj.buyer_name}}</h1>            
+            <table class="table table-bordered">
+                <colgroup style="width: 50%"></colgroup>
+                <colgroup style="width: 50%"></colgroup>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{obj.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>{{obj.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>{{obj.phone}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

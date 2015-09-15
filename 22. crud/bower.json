@@ -1,0 +1,29 @@
+{
+  "name": "StudentApp",
+  "version": "1.0.0",
+  "authors": [
+    "Tahmina Khatoon <tahmina8765@yahoo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "description": "Studen App",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "fontawesome": "~4.3.0",
+    "jqueryui": "~1.11.1",
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.3",    
+    "angular-bootstrap": "latest",
+    "angular": "latest",
+    "angular-ui-router": "latest",
+    "angular-resource": "latest",
+    "angular-ui-bootstrap": "latest"
+  }
+}
